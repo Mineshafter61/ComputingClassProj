@@ -66,7 +66,7 @@ class calc:
 
  def __init__(self,master):
   """Constructor method"""
-  master.title('Calulator')
+  master.title('Calculator')
   master.geometry()
   self.e = Entry(master)
   self.e.grid(row=0,column=0,columnspan=6,pady=3)
@@ -101,6 +101,8 @@ class calc:
   Button(master,text="√",width=3,command=lambda:self.squareroot()).grid(row=3, column=4)
   Button(master,text="x²",width=3,command=lambda:self.square()).grid(row=3, column=5)
 #Main
-root = Tk()
-obj=calc(root) #object instantiated
-root.mainloop()
+def mein():
+ root = Tk()
+ obj=calc(root) #object instantiated
+ root.mainloop()
+mein()

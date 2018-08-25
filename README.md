@@ -1,8 +1,8 @@
 # ComputingClassProj
 A project for my class
 
-# Description
-A platform where people can order their food before going to the restaurant.
+## Description
+An application that will keep track of YOUR budget.
 
-# Impact
-It will help reduce food wastage.
+## Impact
+It will help YOU to reduce spending.

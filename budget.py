@@ -2,23 +2,23 @@
 from Tkinter import *
 
 class budget:
-  def writeBudget(self): # Stores the budget in a text file
+  def writeBudget(self): # Stores the budget in a txt file
     with open('budjconfig.txt','w') as budgetfile:
       budgetfile.write(str(self.newbudj.get()))
 
   def __init__(self,master):
-    master.title('Budget Plan')
+    master.title('Change Budget')
     master.geometry()
-    head = Label(master, justify = LEFT, padx = 10, text = 'Input new budget:').grid(row=0)
+    head = Label(master, justify = LEFT, padx = 10, text = 'Input new budget:').place(relx=0.5,rely=0.4,anchor=CENTER) # header text
 
+    # input field for budget
     self.newbudj = Entry(master)
-    self.newbudj.grid(row=1,column=0)
+    self.newbudj.place(relx=0.5,rely=0.5,anchor=CENTER)
 
-    self.done = Button(master,text="Done",command=self.writeBudget).grid(row=2)
+    self.done = Button(master,text="Done",command=self.writeBudget).place(relx=0.5,rely=0.6,anchor=CENTER) # activation
 
 #Main
 def mein():
   root = Tk()
   obj=budget(root) #object instantiated
   root.mainloop()
-mein()

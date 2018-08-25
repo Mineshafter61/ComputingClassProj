@@ -105,4 +105,3 @@ def mein():
  root = Tk()
  obj=calc(root) #object instantiated
  root.mainloop()
-mein()

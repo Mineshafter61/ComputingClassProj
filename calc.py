@@ -18,10 +18,12 @@ class calc:
    self.value= eval(self.newtext) #evaluate the expression using the eval function
   except SyntaxError or NameErrror:
    self.e.delete(0,END)
-   self.e.insert(0,'Invalid Input!')
+   #self.e.insert(0,'Invalid Input!')
+   self.e.set(0,'Invalid Input!')
   else:
    self.e.delete(0,END)
-   self.e.insert(0,self.value)
+   #self.e.insert(0,self.value)
+   self.e.set(0,self.value)
 
  def squareroot(self):
   """squareroot method"""

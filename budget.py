@@ -1,5 +1,5 @@
 #-*-coding: utf-8-*-
-from Tkinter import *
+from tkinter import *
 
 class budget:
   def writeBudget(self): # Stores the budget in a txt file

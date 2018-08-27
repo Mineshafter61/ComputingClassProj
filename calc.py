@@ -1,5 +1,5 @@
 #-*-coding: utf-8-*-
-from Tkinter import *
+from tkinter import *
 import math
 
 class calc:
@@ -7,7 +7,9 @@ class calc:
   """replace x with * and ÷ with /"""
 
   self.expression = self.e.get()
-  self.newtext=self.expression.replace(self.newdiv,'/')
+  self.newtext=self.expression.replace('÷','/')
+  self.newtext=self.expression.replace('mod','%')
+  self.newtext=self.newtext.replace('^','**')
   self.newtext=self.newtext.replace('x','*')
 
  def equals(self):
@@ -15,7 +17,7 @@ class calc:
 
   self.getandreplace()
   try:
-   self.value= eval(self.newtext) #evaluate the expression using the eval function
+   self.value = eval(self.newtext) #evaluate the expression using the eval function
   except SyntaxError or NameErrror:
    self.e.delete(0,END)
    self.e.insert(0,'Invalid Input!')
@@ -69,23 +71,23 @@ class calc:
   master.title('Calculator')
   master.geometry()
   self.e = Entry(master)
-  self.e.grid(row=0,column=0,columnspan=6,pady=3)
+  self.e.place(relx=0.5,rely=0.3,anchor=CENTER)
   self.e.focus_set() #Sets focus on the input text area
 
   self.div='÷'
-  self.newdiv=self.div.decode('utf-8')
+  #self.newdiv=self.div.decode('utf-8')
 
   #Generating Buttons
   Button(master,text="=",width=3,command=lambda:self.equals()).grid(row=4, column=4)
-  Button(master,text="aⁿ",width=3,command=lambda:self.action('xx')).grid(row=4, column=5)
+  Button(master,text="aⁿ",width=3,command=lambda:self.action('^')).grid(row=4, column=5)
   Button(master,text='AC',width=3,command=lambda:self.clearall()).grid(row=1, column=4)
-  Button(master,text='C',width=3,command=lambda:self.clear1()).grid(row=1, column=5)
+  Button(master,text='←',width=3,command=lambda:self.clear1()).grid(row=1, column=5)
   Button(master,text="+",width=3,command=lambda:self.action('+')).grid(row=4, column=3)
   Button(master,text="x",width=3,command=lambda:self.action('x')).grid(row=2, column=3)
   Button(master,text="-",width=3,command=lambda:self.action('-')).grid(row=3, column=3)
-  Button(master,text="÷",width=3,command=lambda:self.action(self.newdiv)).grid(row=1, column=3)
-  Button(master,text="%",width=3,command=lambda:self.action('%')).grid(row=4, column=2)
-  Button(master,text="7",width=3,command=lambda:self.action('7')).grid(row=1, column=0)
+  Button(master,text="÷",width=3,command=lambda:self.action('÷')).grid(row=1, column=3)
+  Button(master,text="mod",width=3,command=lambda:self.action('mod')).grid(row=4, column=2)
+  Button(master,text="7",width=3,command=lambda:self.action(7)).grid(row=1, column=0)
   Button(master,text="8",width=3,command=lambda:self.action(8)).grid(row=1, column=1)
   Button(master,text="9",width=3,command=lambda:self.action(9)).grid(row=1, column=2)
   Button(master,text="4",width=3,command=lambda:self.action(4)).grid(row=2, column=0)

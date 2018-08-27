@@ -1,7 +1,7 @@
 # main script
 import calc
 import budget
-from Tkinter import *
+from tkinter import *
 
 root = Tk()
 root.title('Budget Planner')

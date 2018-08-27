@@ -2,7 +2,7 @@
 A project for my class
 
 # Description
-A platform where people can order their food before going to the restaurant.
+An application to help people keep track of their budget.
 
 # Impact
-It will help reduce food wastage.
+i don't really know.

@@ -9,7 +9,7 @@ class budget:
   def __init__(self,master):
     master.title('Change Budget')
     master.geometry()
-    head = Label(master, justify = LEFT, padx = 10, text = 'Input new budget:').place(relx=0.5,rely=0.4,anchor=CENTER) # header text
+    Label(master, justify = LEFT, padx = 10, text = 'Input new budget:').place(relx=0.5,rely=0.4,anchor=CENTER) # header text
 
     # input field for budget
     self.newbudj = Entry(master)

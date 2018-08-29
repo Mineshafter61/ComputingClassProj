@@ -21,9 +21,9 @@ class item:
     def inputnext():
       global itemarr
       with open('itemlist.txt','a') as itemlist:
-        itemlist.write(str(cat.get()+'---'))
+        itemlist.write(str(cat.get()+','))
       inputname.mein()
-      self.root.destroy()
+      root.destroy()
 
     self.done = Button(parent,text = buttonCmd,command=inputnext).grid(row=2) # Next
 

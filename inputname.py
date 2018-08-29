@@ -16,8 +16,9 @@ class itemname:
 
     def inputitemname():
       with open('itemlist.txt','a') as itemlist:
-        itemlist.write(str(e.get()+'---'))
-      obj=priceandqty(root)
+        itemlist.write(str(e.get()+','))
+      priceandqty.mein()
+      root.destroy()
 
     self.done = Button(parent, text=buttonCmd, command=inputitemname).grid(row=2)
 

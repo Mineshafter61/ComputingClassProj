@@ -1,7 +1,7 @@
 # main script
 import calc
 import budget
-import newitem
+import newcategory
 from tkinter import *
 
 root = Tk()
@@ -14,7 +14,7 @@ def calcmein():
 def budgetmein():
   budget.mein()
 def itemmein():
-  newitem.mein()
+  newcategory.mein()
 
 budgetb = Button(root,text="Change budget",command=budgetmein).place(relx=0.5, rely=0.4, anchor=CENTER) # Change Budget button
 calcb = Button(root,text="Calculator",command=calcmein).place(relx=0.5, rely=0.5, anchor=CENTER) # Calculator button

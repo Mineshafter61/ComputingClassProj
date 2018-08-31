@@ -7,6 +7,7 @@ class budget:
       budgetfile.write(str(self.newbudj.get()))
 
   def __init__(self,master):
+    '''Constructor'''
     master.title('Change Budget')
     master.geometry()
     Label(master, justify = LEFT, padx = 10, text = 'Input new budget:').place(relx=0.5,rely=0.4,anchor=CENTER) # header text

@@ -59,7 +59,7 @@ class calc:
   """when clear button is pressed,clears the text input area"""
   self.e.delete(0,END)
 
- def clear1(self):
+ def clear1(self): # backspace
   self.txt=self.e.get()[:-1]
   self.e.delete(0,END)
   self.e.insert(0,self.txt)

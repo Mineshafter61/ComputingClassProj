@@ -22,7 +22,7 @@ def buymein():
   categories=("Antiques", "Art", "Baby","Books","Business & Industrial","Cameras & Photo","Cell Phones & Accessories","Clothing, Shoes & Accessories","Coins & Paper Money","Collectibles","Computers/Tablets & Networking","Consumer Electronics","Crafts","Dolls & Bears","DVDs & Movies","Entertainment Memorabilia","Gift Cards & Coupons","Health & Beauty","Home & Garden","Jewelry & Watches","Music","Musical Instruments & Gear","Pet Supplies","Pottery & Glass","Real Estate","Specialty Services","Sporting Goods","Sports Mem, Cards & Fan Shop","Stamps","Tickets & Experiences","Toys & Hobbies","Travel","Video Games & Consoles","Everything Else")
   prices = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
   itemlist = open('itemlist.txt','r').read() # The entire item list
-  print(itemlist)
+  itemlist = itemlist.split('\n')
   for i in itemlist: # Change this such that each line is an element in a list.
     icat, inam, ipri, iqty, ipqt = itemlist[itemlist.index(i)].split(',')
     prices[categories.index(icat)] += ipqt

@@ -22,8 +22,9 @@ class priceandqty:
         itemlist.write(str(e.get()+',')) # Write the price
         itemlist.write(str(f.get()+',')) # Write the quantity
         itemlist.write(str( str(float(e.get()) * float(f.get())) + '\n' )) # Write total and add new line
-        thanks.mein() # Shows done tab
-        root.destroy()
+      thanks.mein() # Shows done tab
+      global root
+      root.destroy()
 
     self.done = Button(parent, text=buttonCmd, command=inputitemname).grid(row=4)
 

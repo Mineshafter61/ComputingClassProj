@@ -1,5 +1,4 @@
-Cameras & Photo,Alpha VII,Food,squid,Dolls & Bears,Madoka Body Pillow,Cameras & Photo,Soviet Union Flag,Dolls & Bears,idk what it's called,9,1,9.0
-4,10,40.0
-250,1,250.0
-1,25,25.0
-490,25,12250.0
+33,231,7623.0
+32,12,384.0
+Business & Industrial,Gaps,890,10,8900.0
+Gift Cards & Coupons,ICC,16,2,32.0

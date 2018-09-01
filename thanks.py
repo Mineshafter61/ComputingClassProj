@@ -17,4 +17,3 @@ def mein(): # script to tell user that the product has been recorded
   else:
     Label(root, justify=CENTER, padx=10, text='Item recorded. Please close all tabs.\nOH NO!!! YOU SPENT ALL YOUR MONEY!!! You owe: '+str(abs(rem))).place(relx=0.5,rely=0.5,anchor=CENTER)
   root.mainloop()
-mein()

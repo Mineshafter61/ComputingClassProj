@@ -23,9 +23,11 @@ def buymein():
   prices = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
   itemlist = open('itemlist.txt','r').read() # The entire item list
   itemlist = itemlist.split('\n')
+  itemlist.pop(-1)
   for i in itemlist: # Change this such that each line is an element in a list.
-    icat, inam, ipri, iqty, ipqt = itemlist[itemlist.index(i)].split(',')
-    prices[categories.index(icat)] += ipqt
+    itemarray = itemlist[itemlist.index(i)].split(',')
+    print(itemarray)
+    prices[categories.index(itemarray[0])] += float(itemarray[-1])
   nobuy = categories[prices.index(max(prices))] # largest number becomes nobuy
   buy = Label(root, justify=CENTER, padx=10, text=str("You should cut down on buying items from this category:\n" + nobuy)).place(relx=0.5, rely=0.3, anchor=CENTER) # reload label
   with open('dontbuy.txt','w') as dontbuy: # Save

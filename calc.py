@@ -24,8 +24,8 @@ class calc:
    self.e.set(0,'Invalid Input!')
   else:
    self.e.delete(0,END)
-   #self.e.insert(0,self.value)
-   self.e.set(0,self.value)
+   self.e.insert(0,self.value)
+   #self.e.set(0,self.value)
 
  def squareroot(self):
   """squareroot method"""
@@ -73,7 +73,7 @@ class calc:
   master.title('Calculator')
   master.geometry()
   self.e = Entry(master)
-  self.e.grid(relx=0.5,rely=0.3,anchor=CENTER)
+  self.e.place(relx=0.5,rely=0.3,anchor=CENTER)
   self.e.focus_set() #Sets focus on the input text area
 
   self.div='÷'

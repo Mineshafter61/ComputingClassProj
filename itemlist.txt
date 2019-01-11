@@ -1,2 +1,4 @@
 Video Games & Consoles,SAMPLE,0,0,0.0
 Books,ff,10,1000,10000.0
+Books,fff,33,2,66.0
+Cameras & Photo,fss,55555,888,49332840.0

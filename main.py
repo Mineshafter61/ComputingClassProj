@@ -1,7 +1,7 @@
 # main script
 import calc
 import budget
-import newcategory
+import newitem
 from tkinter import *
 
 root = Tk()
@@ -13,8 +13,10 @@ def calcmein():
   calc.mein()
 def budgetmein():
   budget.mein()
+  with open("budjconfig.txt","r") as budgetf:
+    budgetv = float(budgetf.read())
 def itemmein():
-  newcategory.mein()
+  newitem.mein()
 
 # What should I buy less?
 def buymein():
@@ -42,6 +44,13 @@ else:
   dontbuy.close()
 
 buy = Label(root, justify=CENTER, padx=10, text=str("You should cut down on buying items from this category:\n" + nobuy)).place(relx=0.5, rely=0.3, anchor=CENTER) # Show which item to buy less
+
+
+with open("budjconfig.txt","r") as budgetf:
+  budgetv = float(budgetf.read())
+
+budgetl = Label(root, justify=CENTER, padx=10, text=str("You have (currency symbol) {} left. (Updates on restart)".format(budgetv))).place(relx=0.5,rely=0.25,anchor=CENTER) #Show remaining budget
+
 
 #Close and start programs
 def calcopen():

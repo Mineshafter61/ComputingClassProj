@@ -2,6 +2,7 @@
 import calc
 import budget
 import newitem
+import delitem
 from tkinter import *
 
 root = Tk()
@@ -17,6 +18,8 @@ def budgetmein():
     budgetv = float(budgetf.read())
 def itemmein():
   newitem.mein()
+def delitemmein():
+  delitem.mein()
 
 # What should I buy less?
 def buymein():
@@ -61,6 +64,7 @@ budgetb = Button(root,text="Change budget",command=budgetmein).place(relx=0.5, r
 calcb = Button(root,text="Calculator",command=calcmein).place(relx=0.5, rely=0.5, anchor=CENTER) # Calculator button
 newitemb = Button(root,text="New Item...",command=itemmein).place(relx=0.5,rely=0.6,anchor=CENTER) # New Item button
 buyless = Button(root,text="What should I stop buying?",command=buymein).place(relx=0.5,rely=0.7,anchor=CENTER) # Calculate buy less item
-close = Button(root,text="Close window",command=exit).place(relx=0.5,rely=0.8,anchor=CENTER) # Calculate buy less item
+delitemb = Button(root,text="Delete item",command=delitemmein).place(relx=0.5,rely=0.8,anchor=CENTER) # Calculate buy less item
+close = Button(root,text="Close window",command=exit).place(relx=0.5,rely=0.9,anchor=CENTER) # Calculate buy less item
 
 root.mainloop()

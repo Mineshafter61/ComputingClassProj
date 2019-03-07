@@ -50,7 +50,10 @@ buy = Label(root, justify=CENTER, padx=10, text=str("You should cut down on buyi
 
 
 with open("budjconfig.txt","r") as budgetf:
-  budgetv = float(budgetf.read())
+  try:
+    budgetv = float(budgetf.read())
+  except:
+    budgetv = "NaN"
 
 budgetl = Label(root, justify=CENTER, padx=10, text=str("You have (currency symbol) {} left. (Updates on restart)".format(budgetv))).place(relx=0.5,rely=0.25,anchor=CENTER) #Show remaining budget
 

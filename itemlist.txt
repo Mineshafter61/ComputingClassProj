@@ -1,0 +1,2 @@
+Music,Bibibi,10,100,1000.0
+Entertainment Memorabilia,Der Untergang,25,6,150.0

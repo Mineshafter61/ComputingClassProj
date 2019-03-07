@@ -8,6 +8,7 @@ class item:
     displayHeaderItemName='Item name'
     buttonCmd='Delete!'
     master.title('Delete Item')
+    ab="Add items before deleting!"
     master.geometry()
     parent = Frame(master)
 
@@ -23,9 +24,10 @@ class item:
       itemlistlist=tuple(itemlistlist)
 
       # Select item to delete
-      cat = StringVar(master); cat.set("Select item to delete..."); catoptions = OptionMenu(master, cat, *itemlistlist); catoptions.place(relx=0.5,rely=0.35,anchor=CENTER);
-
-      # Does nothing
+      try:
+        cat = StringVar(master); cat.set("Select item to delete..."); catoptions = OptionMenu(master, cat, *itemlistlist); catoptions.place(relx=0.5,rely=0.35,anchor=CENTER);
+      except:
+        l = Label(parent,padx=10, text = "Add items before deleting!").grid(row=8)
 
     # Function for Next button
       def inputnext():
@@ -35,7 +37,6 @@ class item:
           for line in f:
             if cat.get() not in line:
               itemlist.write(line)
-
 
     self.done = Button(parent,text = buttonCmd,command=inputnext).grid(row=9) # Next
 
